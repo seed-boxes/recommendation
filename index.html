@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seedboxes-wiki Form</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" integrity="sha256-HbgiGHMLxHZ3kkAiixyvnaaZFNjNWLYKD/QG6PWaQPc=" crossorigin="anonymous" />    
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h1>Seedbox recommendation form</h1>
+                <hr>
+                <form name="myform">
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-12 cell">
+
+                        <div></div>
+                            <span class="input-group-label">What are your main reasons for getting a seedbox?</span>                     
+                            <input type="text" name="reasons" class="custom-input-group-field" placeholder="Tell us why you think you want one" />
+                            
+                            <span class="input-group-label">Do you have any specific requirements?</span>                     
+                            <input type="text" name="specific" class="custom-input-group-field" placeholder="Tell us about them here" />
+                            
+                            <span class="input-group-label">Are you looking for a shared or dedicated solution?</span>                     
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="shared" id="shared-1" type="radio" value="Shared" checked>
+                                <label class="button" for="shared-1">Shared</label>
+
+                                <input name="shared" id="shared-2" type="radio" value="Dedicated">
+                                <label class="button" for="shared-2">Dedicated</label>
+                            </div>
+                            
+                            <span class="input-group-label">Are you looking for managed or unmanaged solution?</span>                     
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="managed" id="managed-1" type="radio" value="Managed" checked>
+                                <label class="button" for="managed-1">Managed</label>
+
+                                <input name="managed" id="managed-2" type="radio" value="Unmanaged">
+                                <label class="button" for="managed-2">Unmanaged</label>
+                            </div>
+                        
+                            <span class="input-group-label">Please describe your Seedbox experience:</span>                     
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="experience" id="experience-1" type="radio" value="None" checked>
+                                <label class="button" for="experience-1">None</label>
+
+                                <input name="experience" id="experience-2" type="radio" value="Novice">
+                                <label class="button" for="experience-2">Novice</label>
+
+                                <input name="experience" id="experience-3" type="radio" value="Competent">
+                                <label class="button" for="experience-3">Competent</label>
+                                
+                                <input name="experience" id="experience-4" type="radio" value="Godlike">
+                                <label class="button" for="experience-4">Godlike</label>
+                            </div>
+                            
+                            <span class="input-group-label">Currently with a provider or used one before?</span>
+                            <input id="providers" name="providers" type="text" class="custom-input-group-field" placeholder="Tell us about it here"/>
+                            
+                            <span class="input-group-label">What is your Linux experience?</span>
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="linux" id="linux-1" type="radio" value="None" checked>
+                                <label class="button" for="linux-1">None</label>
+
+                                <input name="linux" id="linux-2" type="radio" value="Novice">
+                                <label class="button" for="linux-2">Novice</label>
+
+                                <input name="linux" id="linux-3" type="radio" value="Competent">
+                                <label class="button" for="linux-3">Competent</label>
+                                
+                                <input name="linux" id="linux-4" type="radio" value="Godlike">
+                                <label class="button" for="linux-4">Godlike</label>
+                            </div>
+                            
+                            <span class="input-group-label">What is your monthly budget?</span>
+                            <input name="budget" type="text" class="custom-input-group-field custom-margin" placeholder="Put a figure and choose the currency below" />
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="currency" id="currency-usd" type="radio" value="USD" checked>
+                                <label class="button" for="currency-usd">USD</label>
+
+                                <input name="currency" id="currency-gbp" type="radio" value="GBP">
+                                <label class="button" for="currency-gbp">GBP</label>
+
+                                <input name="currency" id="currency-eur" type="radio" value="EUR">
+                                <label class="button" for="currency-eur">EUR</label>
+                                
+                                <input name="currency" id="currency-cad" type="radio" value="CAD">
+                                <label class="button" for="currency-cad">CAD</label>
+                            </div>
+                            
+                            <span class="input-group-label">Payment preferences or requirements</span>
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="payment" id="checkbox-p1" type="checkbox" value="Credit Card">
+                                <label class="button" for="checkbox-p1">Credit Card</label>
+
+                                <input name="payment" id="checkbox-p2" type="checkbox" value="Debit Card">
+                                <label class="button" for="checkbox-p2">Debit Card</label>
+
+                                <input name="payment" id="checkbox-p3" type="checkbox" value="Paypal">
+                                <label class="button" for="checkbox-p3">Paypal</label>
+
+                                <input name="payment" id="checkbox-p4" type="checkbox" value="Crypto">
+                                <label class="button" for="checkbox-p4">Crypto</label>
+
+                                <input name="payment" id="checkbox-p5" type="checkbox" value="Transfer">
+                                <label class="button" for="checkbox-p5">Transfer</label>
+                            </div>
+                            
+                            <span class="input-group-label">Do you need support for public trackers?</span> 
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="public" id="public-yes" type="radio" value="Yes" checked>
+                                <label class="button" for="public-yes">Yes</label>
+
+                                <input name="public" id="public-no" type="radio" value="No">
+                                <label class="button" for="public-no">No</label>
+                            </div>
+                            
+                            <span class="input-group-label">Routing: Tell us your continent</span>
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="location" id="location-europe" type="radio" value="Europe" checked>
+                                <label class="button" for="location-europe">Europe</label>
+
+                                <input name="location" id="location-namerica" type="radio" value="N. America">
+                                <label class="button" for="location-namerica">N. America</label>
+
+                                <input name="location" id="location-samerica" type="radio" value="S. America">
+                                <label class="button" for="location-samerica">S. America</label>
+                                
+                                <input name="location" id="location-asia" type="radio" value="Asia">
+                                <label class="button" for="location-asia">Asia</label>
+                                
+                                <input name="location" id="location-canada" type="radio" value="Candada">
+                                <label class="button" for="location-canada">Canada</label>
+                                
+                                <input name="location" id="location-oceania" type="radio" value="Oceania">
+                                <label class="button" for="location-oceania">Oceania</label>
+                                
+                                <input name="location" id="location-africa" type="radio" value="Africa">
+                                <label class="button" for="location-africa">Africa</label>
+                            </div>
+
+                            <span class="input-group-label">What kind of connection speeds do you need?</span>
+                            <input id="speeds" name="speeds" type="text" class="custom-input-group-field" placeholder="Describe your speed requirements"/>
+                            
+                            <span class="input-group-label">How much monthly bandwidth is needed?</span>
+                            <input id="bandwidth" name="bandwidth" type="text" class="custom-input-group-field" placeholder="Describe your monthly usage"/>
+
+                            <span class="input-group-label">How much disk space do you need?</span>
+                            <input id="storage" name="storage" type="text" class="custom-input-group-field" placeholder="Tell us how much you need or want"/>
+
+                            <span class="input-group-label">Select some features you are looking for</span>
+                            <div class="large-12 cell button-group medium expanded stacked-for-small">
+                                <input name="tagcloud" id="checkbox-t1" type="checkbox" value="Plex">
+                                <label class="button" for="checkbox-t1">Plex</label>
+
+                                <input name="tagcloud" id="checkbox-t2" type="checkbox" value="AutoDL">
+                                <label class="button" for="checkbox-t2">AutoDL</label>
+
+                                <input name="tagcloud" id="checkbox-t3" type="checkbox" value="Racing">
+                                <label class="button" for="checkbox-t3">Racing</label>
+
+                                <input name="tagcloud" id="checkbox-t4" type="checkbox" value="Streaming">
+                                <label class="button" for="checkbox-t4">Streaming</label>
+
+                                <input name="tagcloud" id="checkbox-t5" type="checkbox" value="Multiuser">
+                                <label class="button" for="checkbox-t5">Multiuser</label>
+
+                                <input name="tagcloud" id="checkbox-t6" type="checkbox" value="Unmanaged">
+                                <label class="button" for="checkbox-t6">Unmanaged</label>
+
+                                <input name="tagcloud" id="checkbox-t7" type="checkbox" value="Managed">
+                                <label class="button" for="checkbox-t7">Managed</label>
+
+                                <input name="tagcloud" id="checkbox-t8" type="checkbox" value="Root Access">
+                                <label class="button" for="checkbox-t8">Root Access</label>
+
+                                <input name="tagcloud" id="checkbox-t9" type="checkbox" value="SSH Access">
+                                <label class="button" for="checkbox-t9">SSH Access</label>
+
+                                <input name="tagcloud" id="checkbox-t10" type="checkbox" value="VNC">
+                                <label class="button" for="checkbox-t10">VNC</label>
+
+                                <input name="tagcloud" id="checkbox-t11" type="checkbox" value="Dedicated">
+                                <label class="button" for="checkbox-t11">Dedicated</label>
+
+                                <input name="tagcloud" id="checkbox-t12" type="checkbox" value="QuickBox">
+                                <label class="button" for="checkbox-t12">QuickBox</label>
+
+                                <input name="tagcloud" id="checkbox-t13" type="checkbox" value="Swizzin">
+                                <label class="button" for="checkbox-t13">Swizzin</label>
+                                
+                                <input name="tagcloud" id="checkbox14" type="checkbox" value="Support">
+                                <label class="button" for="checkbox14">Support</label>
+                            </div>
+                                
+                            <span class="input-group-label">Anything else you think we should know?</span>
+                            <textarea id="extra" onchange="resize();" onkeypress="resize();" oninput="resize();" name="extra" class="custom-input-group-field custom-result" placeholder="Tell us about it here"></textarea>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        <button id="submit-id-submit" onClick="addtext();scroll();" class="create-post button expanded" type="button">Create your post.</button>
+                    </div>
+                </div>
+
+                <div class="grid-x">
+                    <div id="editor" class="final_form markdown-body">
+                    </div>
+                </div>
+                
+                <div id="success-alert" class="reddit callout success">
+                    <a href="https://www.reddit.com/r/seedboxes/submit?selftext=true&title=Please%20recommend%20me%20a%20Seedbox" target="_blank">Copied to Clipboard! Go to Reddit and post it".</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js" integrity="sha256-0Ed5s/n37LIeAWApZmZUhY9icm932KvYkTVdJzUBiI4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.11/purify.min.js" integrity="sha256-80n5dmervCuGISioxGlsumrwgMc8LJKT0wZybkLtkLM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.js" integrity="sha256-/cqRc6tEehZivJ5tlpUjFjiy1PoDrCVChM5lmg2WNUo=" crossorigin="anonymous"></script>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>    
+    function resize() {
+        autosize(document.getElementById("extra"));
+    }
+
+    function addtext() {
+        var payment = document.forms[0].payment;
+        var ptags = "";
+        var i;
+        for (i = 0; i < payment.length; i++) {
+            if (payment[i].checked) {
+              ptags += "`" + payment[i].value + "` ";
+            }
+        }
+
+        var tagcloud = document.forms[0].tagcloud;
+        var tags = "";
+        var i;
+        for (i = 0; i < tagcloud.length; i++) {
+            if (tagcloud[i].checked) {
+              tags += "`" + tagcloud[i].value + "` ";
+            }
+        }
+
+        form_generated =
+
+        "**What are your main reasons for getting a seedbox?**" + '\n' + document.myform.reasons.value + "\n\n"
+        + "**Do have any specific requirements?**" + '\n' + document.myform.specific.value + "\n\n"
+        + "**Are you looking for a shared or dedicated seedbox?**" + '\n' + document.myform.shared.value + "\n\n"
+        + "**Are you looking for managed or unmanaged solution?**" + '\n' + document.myform.managed.value + "\n\n"
+        + "**Please describe your Seedbox experience:** " + '\n' + document.myform.experience.value + "\n\n"
+        + "**Currently with a provider or used one before?** " + '\n' + document.myform.providers.value + "\n\n"
+        + "**What is your Linux experience?** " + '\n' + document.myform.linux.value + "\n\n"
+        + "**What is your monthly budget?** " + '\n' + document.myform.budget.value + " " + document.myform.currency.value + "\n\n"
+        + "**Payment preferences or requirements?** " + '\n' + ptags + "\n\n"
+        + "**Do you need support for public trackers?** " + '\n' + document.myform.public.value + "\n\n"
+        + "**Routing: Tell us your continent:**" + '\n' + document.myform.location.value + "\n\n"
+        + "**What kind of connection speeds do you need?** " + '\n' + document.myform.speeds.value + "\n\n"
+        + "**How monthly bandwidth do you need?** " + '\n' + document.myform.bandwidth.value + "\n\n"
+        + "**How much disk space do you need?** " + '\n' + document.myform.storage.value + "\n\n"
+        + "**Select some options you are interested in:** " + '\n' + tags + "\n\n"
+        + "**Notes:** " + '\n' + document.getElementById('extra').value + "\n"
+
+        ;
+
+        document.getElementById('editor').innerHTML = marked(DOMPurify.sanitize(form_generated), { breaks: true });
+        window.getSelection().selectAllChildren(document.getElementById('editor'));
+        document.execCommand('copy');
+    }
+
+    $(document).ready(function() {
+        $("#submit-id-submit").click(function() {
+            $("#success-alert").show();
+            $('html, body').animate({scrollTop:$(document).height()}, 'slow');
+            return false;
+        });
+
+    });
+    </script>
+</body>
+
+</html>
