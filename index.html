@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" integrity="sha256-HbgiGHMLxHZ3kkAiixyvnaaZFNjNWLYKD/QG6PWaQPc=" crossorigin="anonymous" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css" integrity="sha256-Q2fXBbKhtsyhYrSLa7hXCNV+FdhbQhyrjks8Kic0u/U=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -206,6 +207,15 @@
                         </div>
                     </div>
                 </form>
+                
+                <span class="input-group-label">Reddit formatting type</span>
+                <div class="large-12 cell button-group medium expanded stacked-for-small">
+                    <input name="location" id="formatting-fancy" type="radio" value="Fancy" checked>
+                    <label class="button" for="formatting-fancy">Fancy</label>
+
+                    <input name="location" id="formatting-markdown" type="radio" value="Markdown">
+                    <label class="button" for="formatting-markdown">Markdown</label>
+                </div>
 
                 <div class="grid-x grid-padding-x">
                     <div class="large-12 cell">
@@ -226,16 +236,13 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js" integrity="sha256-0Ed5s/n37LIeAWApZmZUhY9icm932KvYkTVdJzUBiI4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.11/purify.min.js" integrity="sha256-80n5dmervCuGISioxGlsumrwgMc8LJKT0wZybkLtkLM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.8.0/marked.min.js" integrity="sha256-fIsvyYkI1qQV1tu1PdlM4FF43kW76YCnCcl/xJCD3Fc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.8/purify.min.js" integrity="sha256-XN23us8AUgOfh7IEF7k6wOzJj5Aacbymf1ImHJaTK94=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.js" integrity="sha256-/cqRc6tEehZivJ5tlpUjFjiy1PoDrCVChM5lmg2WNUo=" crossorigin="anonymous"></script>
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/js/foundation.min.js" integrity="sha256-tdB5sxJ03S1jbwztV7NCvgqvMlVEvtcoJlgf62X49iM=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
-
-    <script>    
+    <script>	
     function resize() {
         autosize(document.getElementById("extra"));
     }
@@ -279,10 +286,18 @@
         + "**Notes:** " + '\n' + document.getElementById('extra').value + "\n"
 
         ;
-
-        document.getElementById('editor').innerHTML = marked(DOMPurify.sanitize(form_generated), { breaks: true });
-        window.getSelection().selectAllChildren(document.getElementById('editor'));
-        document.execCommand('copy');
+        
+        if (document.getElementById("formatting-fancy").checked == true) {
+            document.getElementById('editor').innerHTML = marked(DOMPurify.sanitize(form_generated), { breaks: true });
+            window.getSelection().selectAllChildren(document.getElementById('editor'));
+            document.execCommand('copy');
+        }
+        
+        if (document.getElementById("formatting-markdown").checked == true) {
+            document.getElementById('editor').innerHTML = DOMPurify.sanitize(form_generated);
+            window.getSelection().selectAllChildren(document.getElementById('editor'));
+            document.execCommand('copy');
+        }     
     }
 
     $(document).ready(function() {
